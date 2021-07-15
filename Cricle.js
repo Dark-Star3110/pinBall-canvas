@@ -4,8 +4,8 @@ class Circle{
         this.color=color;
         this.canvas=document.getElementById('my-canvas');
         this.ctx=this.canvas.getContext('2d');
-        this.x=this.canvas.width/2;
-        this.y=this.radius;
+        this.x=Math.floor(Math.random()*(this.canvas.width-this.radius+1))+this.radius;
+        this.y=60;
         this.dx=2;
         this.dy=2;
     }
@@ -24,7 +24,8 @@ class Circle{
         }
         this.x=this.x+this.dx;
         this.y=this.y+this.dy;
-    }  
+    } 
+    
     clear(){
         this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height);
     }

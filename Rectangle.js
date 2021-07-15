@@ -33,13 +33,6 @@ class Rectangle{
             this.x = this.canvas.width-this.width;
         }
     }
-    moveUp(){
-        this.y-=this.speed;
-    }
-    moveDown(){
-        this.y+=this.speed;
-    }
-
     clear(){
         this.ctx.clearRect(this.x,this.y,this.width,this.height);
     }
